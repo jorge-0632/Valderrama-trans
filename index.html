@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transporte seguro y confiable de vehículos en Colombia. Especialistas en camabajas, grúas, carros particulares y maquinaria liviana. Servicio puerta a puerta con seguimiento GPS.">
+    <meta name="keywords" content="transporte vehículos, camabaja Colombia, grúa Bogotá, transporte carros, mudanzas vehículos, transporte maquinaria">
+    <meta name="author" content="VALDERRAMA SAS">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+    <meta name="geo.region" content="CO">
+    <meta name="geo.placename" content="Colombia">
+    <meta name="geo.position" content="4.7110;-74.0721">
+    <meta name="ICBM" content="4.7110, -74.0721">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://valderrama-sas.com/">
+    <meta property="og:title" content="VALDERRAMA SAS - Transporte Seguro de Vehículos">
+    <meta property="og:description" content="Servicio profesional de transporte de vehículos en Colombia. Camabajas, grúas, carros particulares y maquinaria liviana con seguimiento GPS.">
+    <meta property="og:image" content="https://valderrama-sas.com/img/hero-banner.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="VALDERRAMA SAS">
+    <meta property="og:locale" content="es_CO">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://valderrama-sas.com/">
+    <meta name="twitter:title" content="VALDERRAMA SAS - Transporte Seguro de Vehículos">
+    <meta name="twitter:description" content="Servicio profesional de transporte de vehículos en Colombia. Camabajas, grúas, carros particulares y maquinaria liviana con seguimiento GPS.">
+    <meta name="twitter:image" content="https://valderrama-sas.com/img/hero-banner.jpg">
+    <meta name="twitter:site" content="@TransportesCol">
+    <meta name="twitter:creator" content="@TransportesCol">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://valderrama-sas.com/">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#003a70">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Transportes CO">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+
+    <!-- Preconnect para mejor performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <title>VALDERRAMA SAS - Transporte Seguro de Vehículos en Colombia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="#" id="whatsappBtn" class="whatsapp-btn" title="Enviar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="navbar sticky" role="navigation" aria-label="Menú principal">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-truck" aria-hidden="true"></i>
+                <span>VALDERRAMA SAS</span>
+            </div>
+            <div class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li><a href="#inicio" class="nav-link" role="menuitem">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link" role="menuitem">Servicios</a></li>
+                <li><a href="#cotizacion" class="nav-link" role="menuitem">Cotización</a></li>
+                <li><a href="#seguimiento" class="nav-link" role="menuitem">Seguimiento</a></li>
+                <li><a href="#quienes-somos" class="nav-link" role="menuitem">Quiénes Somos</a></li>
+                <li><a href="#galeria" class="nav-link" role="menuitem">Galería</a></li>
+                <li><a href="#cobertura" class="nav-link" role="menuitem">Cobertura</a></li>
+                <li><a href="#testimonios" class="nav-link" role="menuitem">Testimonios</a></li>
+                <li><a href="#contacto" class="nav-link btn-contact" role="menuitem">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Schema.org markup para SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MovingCompany",
+        "name": "VALDERRAMA SAS",
+        "description": "Servicio profesional de transporte de vehículos en Colombia. Especialistas en camabajas, grúas, carros particulares y maquinaria liviana.",
+        "url": "https://valderrama-sas.com",
+        "logo": "https://valderrama-sas.com/img/logo.png",
+        "telephone": "+57 302 550 7072",
+        "email": "jorgehernan1178@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Colombia",
+            "addressLocality": "Colombia",
+            "addressRegion": "CO",
+            "postalCode": "",
+            "addressCountry": "CO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 4.7110,
+            "longitude": -74.0721
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "Colombia"
+        },
+        "serviceType": ["Transporte de vehículos", "Mudanzas", "Grúa", "Transporte de maquinaria"],
+        "priceRange": "$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "500"
+        }
+    }
+    </script>
+
+    <main id="main-content" role="main">
+
+    <!-- SECCIÓN 1: INICIO (HOME) -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Transporte Seguro y Confiable de Vehículos en Colombia</h1>
+            <p class="hero-subtitle">Movemos tu vehículo con total seguridad y puntualidad</p>
+            <button class="btn-primary btn-lg" onclick="scrollTo('#contacto')">
+                <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+            </button>
+        </div>
+        <div class="hero-image">
+            <img src="img/hero-banner.jpg" alt="Camabaja transportando vehículo en carretera - Servicio profesional de transporte">
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE BENEFICIOS -->
+    <section class="benefits">
+        <div class="benefits-container">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Seguridad Garantizada</h3>
+                <p>Transporte asegurado con cobertura total</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-map"></i>
+                </div>
+                <h3>Cobertura Nacional</h3>
+                <p>Llegamos a todo el país</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Atención 24/7</h3>
+                <p>Disponibles todos los días</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-id-card"></i>
+                </div>
+                <h3>Conductores Profesionales</h3>
+                <p>Personal certificado y experimentado</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: SERVICIOS -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-subtitle">Ofrecemos soluciones completas de transporte para todos tus vehículos</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dolly"></i>
+                    </div>
+                    <h3>Transporte en Camabaja</h3>
+                    <p>Transporte seguro en camabaja de uno o dos vehículos con equipos de última tecnología.</p>
+                    <button class="btn-secondary" onclick="openWhatsappForm('Cotización Camabaja')">Cotizar</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dumpster"></i>
+                    </div>
+                    <h3>Transporte en Grúa</h3>
+                    <p>Servicio especializado para vehículos averiados o con dificultades de movimiento.</p>
+                    <button class="btn-secondary" onclick="openWhatsappForm('Cotización Grúa')">Cotizar</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Carros Particulares</h3>
+                    <p>Transporte cuidadoso de automóviles con protección integral del vehículo.</p>
+                    <button class="btn-secondary" onclick="openWhatsappForm('Cotización Carro Particular')">Cotizar</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-van-shuttle"></i>
+                    </div>
+                    <h3>Transporte de Camionetas</h3>
+                    <p>Servicio especializado para camionetas de carga y transporte de pasajeros.</p>
+                    <button class="btn-secondary" onclick="openWhatsappForm('Cotización Camioneta')">Cotizar</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <h3>Maquinaria Liviana</h3>
+                    <p>Transporte seguro de motos, quads, cortadoras y otros equipos de construcción.</p>
+                    <button class="btn-secondary" onclick="openWhatsappForm('Cotización Maquinaria Liviana')">Cotizar</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Servicio Puerta a Puerta</h3>
+                    <p>Recogemos tu vehículo donde estés y lo entregamos en tu destino final.</p>
+                    <button class="btn-secondary" onclick="openWhatsappForm('Solicitar Servicio Puerta a Puerta')">Cotizar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN COTIZACIÓN -->
+    <section id="cotizacion" class="cotizacion">
+        <div class="container">
+            <h2 class="section-title">Cotización Instantánea</h2>
+            <p class="section-subtitle">Calcula el costo de tu transporte en segundos</p>
+
+            <div class="cotizacion-content">
+                <div class="cotizacion-form">
+                    <h3>Calcula tu Cotización</h3>
+
+                    <div class="form-group">
+                        <label for="tipo-vehiculo-cot">Tipo de Vehículo</label>
+                        <select id="tipo-vehiculo-cot" onchange="updateCotizacion()">
+                            <option value="">Selecciona el tipo</option>
+                            <option value="carro">Carro Particular</option>
+                            <option value="camioneta">Camioneta</option>
+                            <option value="camabaja">Camabaja</option>
+                            <option value="grua">Grúa</option>
+                            <option value="maquinaria">Maquinaria Liviana</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ciudad-origen-cot">Ciudad Origen</label>
+                            <select id="ciudad-origen-cot" onchange="updateCotizacion()">
+                                <option value="">Selecciona origen</option>
+                                <option value="bogota">Bogotá</option>
+                                <option value="medellin">Medellín</option>
+                                <option value="cali">Cali</option>
+                                <option value="barranquilla">Barranquilla</option>
+                                <option value="cartagena">Cartagena</option>
+                                <option value="bucaramanga">Bucaramanga</option>
+                                <option value="neiva">Neiva</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ciudad-destino-cot">Ciudad Destino</label>
+                            <select id="ciudad-destino-cot" onchange="updateCotizacion()">
+                                <option value="">Selecciona destino</option>
+                                <option value="bogota">Bogotá</option>
+                                <option value="medellin">Medellín</option>
+                                <option value="cali">Cali</option>
+                                <option value="barranquilla">Barranquilla</option>
+                                <option value="cartagena">Cartagena</option>
+                                <option value="bucaramanga">Bucaramanga</option>
+                                <option value="neiva">Neiva</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="distancia-cot">Distancia Aproximada (km)</label>
+                        <input type="number" id="distancia-cot" placeholder="Ej: 300" oninput="updateCotizacion()">
+                    </div>
+
+                    <div class="cotizacion-resultado" id="cotizacion-resultado" style="display: none;">
+                        <h4>Tu Cotización</h4>
+                        <div class="resultado-detalle">
+                            <div class="resultado-item">
+                                <span>Precio Base:</span>
+                                <span id="precio-base">$0</span>
+                            </div>
+                            <div class="resultado-item">
+                                <span>Costo por Distancia:</span>
+                                <span id="costo-distancia">$0</span>
+                            </div>
+                            <div class="resultado-item total">
+                                <span>Total Estimado:</span>
+                                <span id="total-cotizacion">$0</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary btn-lg" onclick="solicitarCotizacion()">
+                            <i class="fab fa-whatsapp"></i> Solicitar Cotización Exacta
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cotizacion-info">
+                    <h3>¿Por qué elegirnos?</h3>
+                    <div class="info-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Cotización Instantánea</h4>
+                                <p>Obtén tu presupuesto en segundos</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Seguro Incluido</h4>
+                                <p>Cobertura total durante el transporte</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Seguimiento GPS</h4>
+                                <p>Rastrea tu vehículo en tiempo real</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-user-check"></i>
+                            <div>
+                                <h4>Conductores Certificados</h4>
+                                <p>Personal profesional y experimentado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SEGUIMIENTO -->
+    <section id="seguimiento" class="seguimiento">
+        <div class="container">
+            <h2 class="section-title">Seguimiento de Envíos</h2>
+            <p class="section-subtitle">Rastrea tu vehículo en tiempo real</p>
+
+            <div class="seguimiento-content">
+                <div class="seguimiento-form">
+                    <h3>Ingresa tu Código de Seguimiento</h3>
+                    <div class="form-group">
+                        <input type="text" id="codigo-seguimiento" placeholder="Ej: TC-2026-00123" maxlength="12">
+                        <button class="btn-primary" onclick="buscarEnvio()">
+                            <i class="fas fa-search"></i> Buscar
+                        </button>
+                    </div>
+                    <p class="seguimiento-help">¿No tienes código? <a href="#contacto">Contáctanos</a></p>
+                </div>
+
+                <div class="seguimiento-resultado" id="seguimiento-resultado" style="display: none;">
+                    <div class="envio-info">
+                        <h4>Información del Envío</h4>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span>Código:</span>
+                                <span id="envio-codigo">-</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Estado:</span>
+                                <span id="envio-estado" class="estado">-</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Origen:</span>
+                                <span id="envio-origen">-</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Destino:</span>
+                                <span id="envio-destino">-</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Fecha Estimada:</span>
+                                <span id="envio-fecha">-</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Conductor:</span>
+                                <span id="envio-conductor">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="envio-timeline" id="envio-timeline">
+                        <!-- Timeline se genera dinámicamente -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: QUIÉNES SOMOS -->
+    <section id="quienes-somos" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Quiénes Somos</h2>
+                    <p>Somos una empresa dedicada al transporte seguro y confiable de vehículos en Colombia con más de 15 años de experiencia en el mercado.</p>
+                    
+                    <div class="about-info">
+                        <div class="info-box">
+                            <h4>15+</h4>
+                            <p>Años de experiencia</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>500+</h4>
+                            <p>Clientes satisfechos</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>25</h4>
+                            <p>Vehículos de transporte</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>32</h4>
+                            <p>Ciudades de cobertura</p>
+                        </div>
+                    </div>
+
+                    <h3>Nuestro Compromiso</h3>
+                    <ul class="commitment-list">
+                        <li><i class="fas fa-check-circle"></i> Seguridad garantizada en cada transporte</li>
+                        <li><i class="fas fa-check-circle"></i> Puntualidad y confiabilidad</li>
+                        <li><i class="fas fa-check-circle"></i> Conductores certificados y profesionales</li>
+                        <li><i class="fas fa-check-circle"></i> Atención al cliente 24/7</li>
+                        <li><i class="fas fa-check-circle"></i> Cobertura a nivel nacional</li>
+                    </ul>
+                </div>
+
+                <div class="about-image">
+                    <img src="img/equipo-profesional.jpg" alt="Equipo profesional de VALDERRAMA SAS - Conductores certificados y personal especializado en transporte de vehículos" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: SEGURIDAD Y CONFIANZA -->
+    <section class="security">
+        <div class="container">
+            <h2 class="section-title">Seguridad y Confianza</h2>
+            <p class="section-subtitle">Todo lo que hacemos está pensado en tu tranquilidad</p>
+            
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Seguro de Transporte</h3>
+                    <p>Cobertura total contra todo riesgo durante el transporte. Tus vehículos están completamente asegurados.</p>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="fas fa-map-location-dot"></i>
+                    </div>
+                    <h3>Seguimiento en Tiempo Real</h3>
+                    <p>Rastreo GPS constante de tu vehículo. Recibe actualizaciones en cada etapa del transporte.</p>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Conductores Certificados</h3>
+                    <p>Personal altamente capacitado con licencia profesional y experiencia comprobada.</p>
+                </div>
+
+                <div class="security-card">
+                    <div class="security-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Monitoreo 24/7</h3>
+                    <p>Cámaras de vigilancia en todos nuestros vehículos. Protección constante de tus bienes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CERTIFICACIONES -->
+    <section class="certificaciones">
+        <div class="container">
+            <h2 class="section-title">Certificaciones y Reconocimientos</h2>
+            <p class="section-subtitle">Nuestra calidad y compromiso avalados</p>
+
+            <div class="certificaciones-grid">
+                <div class="certificacion-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>ISO 9001:2015</h3>
+                    <p>Sistema de Gestión de Calidad</p>
+                    <span class="cert-year">2024</span>
+                </div>
+
+                <div class="certificacion-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Seguro de Responsabilidad</h3>
+                    <p>Cobertura completa hasta $500M</p>
+                    <span class="cert-year">2024</span>
+                </div>
+
+                <div class="certificacion-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Premio Excelencia</h3>
+                    <p>Mejor Empresa de Transporte 2023</p>
+                    <span class="cert-year">2023</span>
+                </div>
+
+                <div class="certificacion-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Certificación Ambiental</h3>
+                    <p>Compromiso con el medio ambiente</p>
+                    <span class="cert-year">2024</span>
+                </div>
+
+                <div class="certificacion-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Registro Nacional</h3>
+                    <p>Empresa registrada en Cámara de Comercio</p>
+                    <span class="cert-year">2020</span>
+                </div>
+
+                <div class="certificacion-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>5 Estrellas</h3>
+                    <p>Calificación promedio de clientes</p>
+                    <span class="cert-year">2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5: GALERÍA -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Galería</h2>
+            <p class="section-subtitle">Visualiza nuestro trabajo y profesionalismo</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="img/camabaja-1.jpg" alt="Camabaja transportando vehículo particular en Bogotá" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Transporte en Camabaja</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/grua-1.jpg" alt="Servicio de grúa remolcando vehículo averiado" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Servicio de Grúa</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/transporte-vehiculo.jpg" alt="Transporte seguro de carro particular en camabaja" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Carro Particular</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/carretera-1.jpg" alt="Equipo de transporte operando en carretera colombiana" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>En la Carretera</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/camabaja-2.jpg" alt="Segunda camabaja transportando maquinaria pesada" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Transporte Especializado</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/equipo-profesional.jpg" alt="Equipo profesional de conductores certificados de VALDERRAMA SAS" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Equipo Profesional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 7: COBERTURA -->
+    <section id="cobertura" class="coverage">
+        <div class="container">
+            <h2 class="section-title">Nuestra Cobertura</h2>
+            <p class="section-subtitle">Operamos en todo Colombia y expandimos continuamente</p>
+            
+            <div class="coverage-content">
+                <div class="coverage-map">
+                    <div id="map" style="height: 400px; border-radius: 10px; overflow: hidden;"></div>
+                </div>
+
+                <div class="coverage-cities">
+                    <h3>Principales Ciudades</h3>
+                    <div class="cities-grid">
+                        <div class="city-item">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Bogotá</span>
+                        </div>
+                        <div class="city-item">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Medellín</span>
+                        </div>
+                        <div class="city-item">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Cali</span>
+                        </div>
+                        <div class="city-item">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Neiva</span>
+                        </div>
+                        <div class="city-item">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Bucaramanga</span>
+                        </div>
+                        <div class="city-item">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Barranquilla</span>
+                        </div>
+                        <div class="city-item">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Santa Marta</span>
+                        </div>
+                        <div class="city-item">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Cartagena</span>
+                        </div>
+                        <div class="city-item">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Cúcuta</span>
+                        </div>
+                        <div class="city-item">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Pasto</span>
+                        </div>
+                        <div class="city-item">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Armenia</span>
+                        </div>
+                        <div class="city-item">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Ibagué</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 8: TESTIMONIOS -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo que Dicen Nuestros Clientes</h2>
+            <p class="section-subtitle">Opiniones reales de clientes satisfechos</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Excelente servicio, puntual y profesional. Mi carro llegó en perfectas condiciones. Muy recomendado."</p>
+                    <h4>Juan Carlos Rodríguez</h4>
+                    <p class="testimonial-city">Bogotá</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Confiable y seguro. El seguimiento en tiempo real es perfecto. Volveré a contratar sus servicios."</p>
+                    <h4>María González López</h4>
+                    <p class="testimonial-city">Medellín</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Transporté mi camioneta de Bogotá a Cartagena. Llegó sin problemas y a tiempo. Excelentes profesionales."</p>
+                    <h4>Pedro Martínez Silva</h4>
+                    <p class="testimonial-city">Cartagena</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ESTADÍSTICAS -->
+    <section class="estadisticas">
+        <div class="container">
+            <h2 class="section-title">VALDERRAMA SAS en Números</h2>
+            <p class="section-subtitle">Resultados que respaldan nuestra experiencia</p>
+
+            <div class="estadisticas-grid">
+                <div class="estadistica-card">
+                    <div class="estadistica-number" data-target="15000">0</div>
+                    <h3>Vehículos Transportados</h3>
+                    <p>Desde nuestros inicios</p>
+                </div>
+
+                <div class="estadistica-card">
+                    <div class="estadistica-number" data-target="500">0</div>
+                    <h3>Clientes Satisfechos</h3>
+                    <p>Confían en nosotros</p>
+                </div>
+
+                <div class="estadistica-card">
+                    <div class="estadistica-number" data-target="32">0</div>
+                    <h3>Ciudades Cubiertas</h3>
+                    <p>A nivel nacional</p>
+                </div>
+
+                <div class="estadistica-card">
+                    <div class="estadistica-number" data-target="25">0</div>
+                    <h3>Vehículos de Flota</h3>
+                    <p>Camabajas y grúas</p>
+                </div>
+
+                <div class="estadistica-card">
+                    <div class="estadistica-number" data-target="98">0</div>
+                    <h3>% Puntualidad</h3>
+                    <p>Entregas a tiempo</p>
+                </div>
+
+                <div class="estadistica-card">
+                    <div class="estadistica-number" data-target="15">0</div>
+                    <h3>Años de Experiencia</h3>
+                    <p>En el mercado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 6: CONTACTO -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <p class="section-subtitle">Estamos listos para ayudarte</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-details">
+                            <h4>Teléfono</h4>
+                            <p>+57 302 5705072</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="info-details">
+                            <h4>WhatsApp</h4>
+                            <p>+57 302 5705072</p>
+                            <a href="#" id="whatsappLink" class="btn-secondary">Enviar Mensaje</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-details">
+                            <h4>Email</h4>
+                            <p>jorgehernan1178@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-details">
+                            <h4>Ubicación</h4>
+                            <p>Colombia</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-details">
+                            <h4>Horario de Atención</h4>
+                            <p><strong>Lunes a Viernes:</strong> 8:00 AM - 6:00 PM</p>
+                            <p><strong>Sábados:</strong> 9:00 AM - 1:00 PM</p>
+                            <p><strong>Domingos:</strong> Cerrado</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="contactForm" class="contact-form">
+                    <h3>Envíanos tu Cotización</h3>
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono *</label>
+                        <input type="tel" id="telefono" placeholder="+57 302 5705072" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ciudad-origen">Ciudad de Origen *</label>
+                            <input type="text" id="ciudad-origen" placeholder="Bogotá" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ciudad-destino">Ciudad Destino *</label>
+                            <input type="text" id="ciudad-destino" placeholder="Medellín" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo-vehiculo">Tipo de Vehículo *</label>
+                        <select id="tipo-vehiculo" required>
+                            <option value="">Selecciona el tipo de vehículo</option>
+                            <option value="Carro particular">Carro Particular</option>
+                            <option value="Camioneta">Camioneta</option>
+                            <option value="Camabaja">Camabaja</option>
+                            <option value="Grúa">Grúa</option>
+                            <option value="Maquinaria liviana">Maquinaria Liviana</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" placeholder="Cuéntanos más sobre tu necesidad..." rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-lg">
+                        <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PREGUNTAS FRECUENTES -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <p class="section-subtitle">Resolvemos tus dudas más comunes</p>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>¿Cuánto tiempo tarda el transporte?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El tiempo de transporte depende de la distancia y el tipo de vehículo. Generalmente:</p>
+                        <ul>
+                            <li>Transportes locales: 24-48 horas</li>
+                            <li>Transportes interdepartamentales: 3-7 días</li>
+                            <li>Transportes urgentes: 24-72 horas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>¿Mi vehículo está asegurado?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, todos nuestros transportes incluyen seguro de responsabilidad civil con cobertura hasta $500 millones. Además, ofrecemos seguros adicionales según las necesidades del cliente.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>¿Puedo rastrear mi vehículo?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutamente. Todos nuestros vehículos están equipados con GPS. Te proporcionamos un código de seguimiento para que puedas monitorear el transporte en tiempo real desde nuestra página web.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>¿Qué documentos necesito?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Para transportes dentro de Colombia necesitas:</p>
+                        <ul>
+                            <li>SOAT vigente</li>
+                            <li>Tarjeta de propiedad</li>
+                            <li>Cédula del propietario</li>
+                            <li>Autorización firmada (si no eres el propietario)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>¿Ofrecen servicio puerta a puerta?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, ofrecemos servicio puerta a puerta en la mayoría de nuestras rutas. Recogemos tu vehículo en la dirección que nos indiques y lo entregamos en el destino final.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>¿Cómo solicito una cotización?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Puedes solicitar una cotización de 3 formas:</p>
+                        <ul>
+                            <li>Usando nuestra calculadora en línea</li>
+                            <li>Llamándonos al +57 302 550 7072</li>
+                            <li>Escribiéndonos por WhatsApp al +57 302 550 7072</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>VALDERRAMA SAS</h4>
+                    <p>Movemos tu vehículo con seguridad.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Camabaja</a></li>
+                        <li><a href="#">Grúa</a></li>
+                        <li><a href="#">Carros Particulares</a></li>
+                        <li><a href="#">Maquinaria</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 VALDERRAMA SAS. Todos los derechos reservados.</p>
+                <p>Movemos tu vehículo con seguridad</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

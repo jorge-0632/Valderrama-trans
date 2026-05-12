@@ -1,0 +1,86 @@
+{
+    "name": "Transportes Colombia - Transporte de Vehículos",
+    "short_name": "Transportes CO",
+    "description": "Servicio profesional de transporte de vehículos en Colombia. Camabajas, grúas, carros particulares y maquinaria liviana con seguimiento GPS.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#003a70",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "es-CO",
+    "categories": ["business", "transportation", "productivity"],
+    "icons": [
+        {
+            "src": "/img/icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/icon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/icon-128x128.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/icon-152x152.png",
+            "sizes": "152x152",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/img/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Cotización Rápida",
+            "short_name": "Cotizar",
+            "description": "Calcula el costo de tu transporte",
+            "url": "/#cotizacion",
+            "icons": [{ "src": "/img/icon-96x96.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "Seguimiento",
+            "short_name": "Rastrear",
+            "description": "Rastrea tu envío en tiempo real",
+            "url": "/#seguimiento",
+            "icons": [{ "src": "/img/icon-96x96.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "Contacto",
+            "short_name": "Llamar",
+            "description": "Contacta con nuestro equipo",
+            "url": "/#contacto",
+            "icons": [{ "src": "/img/icon-96x96.png", "sizes": "96x96" }]
+        }
+    ]
+}
