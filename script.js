@@ -77,9 +77,15 @@ function setupContactForm() {
 
 // ========== ABRIR FORMULARIO DE WHATSAPP DESDE SERVICIOS ==========
 function openWhatsappForm(servicio) {
-    document.getElementById('tipo-vehiculo').value = servicio;
-    document.getElementById('mensaje').focus();
-    scrollTo('#contacto');
+    const mensaje = encodeURIComponent(
+        `Hola,\n\n` +
+        `Me interesa solicitar información sobre: *${servicio}*\n\n` +
+        `Por favor, bríndame más detalles sobre este servicio y envíame una cotización.\n\n` +
+        `¡Gracias!`
+    );
+    
+    const whatsappURL = `https://wa.me/${EMPRESA_CONFIG.whatsapp}?text=${mensaje}`;
+    window.open(whatsappURL, '_blank');
 }
 
 // ========== MENU TOGGLE (MÓVIL) ==========
