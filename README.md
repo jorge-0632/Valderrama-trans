@@ -106,8 +106,8 @@ Actualiza los datos en `script.js`:
 ```javascript
 const EMPRESA_CONFIG = {
     nombre: 'Transportes Colombia',
-    whatsapp: '573001234567', // Tu número sin + ni espacios
-    email: 'info@transportescolombia.com',
+    whatsapp: '3025705072', // Tu número sin + ni espacios
+    email: 'jorgehernan1178@gmail.com',
     telefono: '+57 1 5555-1234'
 };
 ```

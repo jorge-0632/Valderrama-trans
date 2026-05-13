@@ -48,19 +48,18 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Transportes CO">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
 
     <!-- Preconnect para mejor performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://unpkg.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 
     <title>VALDERRAMA SAS - Transporte Seguro de Vehículos en Colombia</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <!-- Botón Flotante de WhatsApp -->
@@ -86,7 +85,7 @@
                 <li><a href="#cotizacion" class="nav-link" role="menuitem">Cotización</a></li>
                 <li><a href="#seguimiento" class="nav-link" role="menuitem">Seguimiento</a></li>
                 <li><a href="#quienes-somos" class="nav-link" role="menuitem">Quiénes Somos</a></li>
-                <li><a href="#galeria" class="nav-link" role="menuitem"><center>Nuestra Flota</center></a></li>
+                <li><a href="#galeria" class="nav-link" role="menuitem">Nuestra Flota</a></li>
                 <li><a href="#cobertura" class="nav-link" role="menuitem">Cobertura</a></li>
                 <li><a href="#testimonios" class="nav-link" role="menuitem">Testimonios</a></li>
                 <li><a href="#contacto" class="nav-link btn-contact" role="menuitem">Contacto</a></li>
@@ -137,47 +136,124 @@
     <!-- SECCIÓN 1: INICIO (HOME) -->
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1 class="hero-title"><center>Transporte Seguro y Confiable de Vehículos en Colombia</center></h1>
-            <p class="hero-subtitle"><center>Movemos tu vehículo con total seguridad y puntualidad</center></p>
-            <center><button class="btn-primary btn-lg" onclick="scrollTo('#contacto')">
-                <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
-            </button></center>
+            <div class="hero-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>Empresa Certificada</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-highlight">VALDERRAMA SAS</span><br>
+                Transporte Seguro y Confiable de Vehículos en Colombia
+            </h1>
+            <p class="hero-subtitle">Más de 15 años moviendo tu vehículo con total seguridad, puntualidad y tecnología GPS avanzada</p>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">15,000+</div>
+                    <div class="stat-label">Vehículos Transportados</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">32</div>
+                    <div class="stat-label">Ciudades Cubiertas</div>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <button class="btn-primary btn-lg" onclick="scrollTo('#contacto')">
+                    <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+                </button>
+                <button class="btn-secondary btn-lg" onclick="scrollTo('#servicios')">
+                    <i class="fas fa-eye"></i> Ver Servicios
+                </button>
+            </div>
+
+            <div class="hero-trust">
+                <div class="trust-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Seguro Incluido</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Atención 24/7</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Cobertura Nacional</span>
+                </div>
+            </div>
         </div>
         <div class="hero-image">
-            <img src="img/hero-banner.jpg" alt="Camabaja transportando vehículo en carretera - Servicio profesional de transporte">
+            <img src="img/hero-banner.jpg" alt="Camabaja transportando vehículo en carretera - Servicio profesional de transporte" loading="lazy">
+            <div class="hero-overlay">
+                <div class="hero-floating-card">
+                    <div class="card-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="card-content">
+                        <h4>Transporte Activo</h4>
+                        <p>En ruta hacia tu destino</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- SECCIÓN DE BENEFICIOS -->
     <section class="benefits">
-        <div class="benefits-container">
-            <div class="benefit-card">
-                <div class="benefit-icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h3><center>Seguridad Garantizada</center></h3>
-                <p><center>Transporte asegurado con cobertura total</center></p>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Por qué elegir VALDERRAMA SAS?</h2>
+                <p class="section-subtitle">Somos líderes en transporte de vehículos con más de 15 años de experiencia</p>
             </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">
-                    <i class="fas fa-map"></i>
+
+            <div class="benefits-container">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Seguridad Garantizada</h3>
+                    <p>Transporte asegurado con cobertura total hasta $500M. Tus vehículos están completamente protegidos.</p>
+                    <div class="benefit-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Seguro incluido</span>
+                    </div>
                 </div>
-                <h3><center>Cobertura Nacional</center></h3>
-                <p><center>Llegamos a todo el país</center></p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">
-                    <i class="fas fa-clock"></i>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3>Cobertura Nacional</h3>
+                    <p>Llegamos a 32 ciudades principales de Colombia con rutas optimizadas y tiempos de entrega garantizados.</p>
+                    <div class="benefit-feature">
+                        <i class="fas fa-check"></i>
+                        <span>32 ciudades</span>
+                    </div>
                 </div>
-                <h3><center>Atención 24/7</center></h3>
-                <p><center>Disponibles todos los días</center></p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">
-                    <i class="fas fa-id-card"></i>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Atención 24/7</h3>
+                    <p>Servicio disponible todos los días del año. Tu tranquilidad es nuestra prioridad.</p>
+                    <div class="benefit-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Soporte continuo</span>
+                    </div>
                 </div>
-                <h3><center>Conductores Profesionales</center></h3>
-                <p><center>Personal certificado y experimentado</center></p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>Conductores Profesionales</h3>
+                    <p>Personal certificado con licencia profesional y años de experiencia en transporte especializado.</p>
+                    <div class="benefit-feature">
+                        <i class="fas fa-check"></i>
+                        <span>Certificados</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -185,62 +261,89 @@
     <!-- SECCIÓN 2: SERVICIOS -->
     <section id="servicios" class="services">
         <div class="container">
-            <h2 class="section-title">Nuestros Servicios</h2>
-            <p class="section-subtitle">Ofrecemos soluciones completas de transporte para todos tus vehículos</p>
-            
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Servicios Especializados</h2>
+                <p class="section-subtitle">Soluciones completas de transporte para todos tus vehículos con la más alta calidad y seguridad</p>
+            </div>
+
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card featured">
+                    <div class="service-badge">Más Popular</div>
                     <div class="service-icon">
                         <i class="fas fa-dolly"></i>
                     </div>
-                    <h3><center>Transporte en Camabaja</center></h3>
-                    <p>Transporte seguro en camabaja de uno o dos vehículos con equipos de última tecnología.</p>
-                    <center><button class="btn-secondary" onclick="openWhatsappForm('Cotización Camabaja')">Cotizar</button></center>
+                    <h3>Transporte en Camabaja</h3>
+                    <p>Transporte seguro en camabaja de uno o dos vehículos con equipos de última tecnología y seguimiento GPS en tiempo real.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">GPS Incluido</span>
+                        <span class="feature-tag">Seguro Total</span>
+                    </div>
+                    <button class="btn-secondary" onclick="openWhatsappForm('Cotización Camabaja')">Cotizar</button>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-dumpster"></i>
                     </div>
-                    <h3><center>Transporte en Grúa</center></h3>
-                    <p>Servicio especializado para vehículos averiados o con dificultades de movimiento.</p>
-                    <center><button class="btn-secondary" onclick="openWhatsappForm('Cotización Grúa')">Cotizar</button></center>
+                    <h3>Transporte en Grúa</h3>
+                    <p>Servicio especializado para vehículos averiados o con dificultades de movimiento. Rescate y transporte inmediato.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Rescate 24/7</span>
+                        <span class="feature-tag">Urgente</span>
+                    </div>
+                    <button class="btn-secondary" onclick="openWhatsappForm('Cotización Grúa')">Cotizar</button>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-car"></i>
                     </div>
-                    <h3><center>Carros Particulares</center></h3>
-                    <p>Transporte cuidadoso de automóviles con protección integral del vehículo.</p>
-                    <center><button class="btn-secondary" onclick="openWhatsappForm('Cotización Carro Particular')">Cotizar</button></center>
+                    <h3>Carros Particulares</h3>
+                    <p>Transporte cuidadoso de automóviles con protección integral del vehículo y embalaje especializado.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Protección Total</span>
+                        <span class="feature-tag">Cuidado Premium</span>
+                    </div>
+                    <button class="btn-secondary" onclick="openWhatsappForm('Cotización Carro Particular')">Cotizar</button>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-van-shuttle"></i>
                     </div>
-                    <h3><center>Transporte de Camionetas</center></h3>
-                    <p>Servicio especializado para camionetas de carga y transporte de pasajeros.</p>
-                    <center><button class="btn-secondary" onclick="openWhatsappForm('Cotización Camioneta')">Cotizar</button></center>
+                    <h3>Transporte de Camionetas</h3>
+                    <p>Servicio especializado para camionetas de carga y transporte de pasajeros con equipos adaptados.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Equipos Especiales</span>
+                        <span class="feature-tag">Carga Segura</span>
+                    </div>
+                    <button class="btn-secondary" onclick="openWhatsappForm('Cotización Camioneta')">Cotizar</button>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-tractor"></i>
                     </div>
-                    <h3><center>Maquinaria Liviana</center></h3>
-                    <p>Transporte seguro de motos, quads, cortadoras y otros equipos de construcción.</p>
-                    <center><button class="btn-secondary" onclick="openWhatsappForm('Cotización Maquinaria Liviana')">Cotizar</button></center>
+                    <h3>Maquinaria Liviana</h3>
+                    <p>Transporte seguro de motos, quads, cortadoras y otros equipos de construcción con fijación especializada.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Fijación Segura</span>
+                        <span class="feature-tag">Equipos Pesados</span>
+                    </div>
+                    <button class="btn-secondary" onclick="openWhatsappForm('Cotización Maquinaria Liviana')">Cotizar</button>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-home"></i>
                     </div>
-                    <h3><center>Servicio Puerta a Puerta</center></h3>
-                    <p>Recogemos tu vehículo donde estés y lo entregamos en tu destino final.</p>
-                    <center><button class="btn-secondary" onclick="openWhatsappForm('Solicitar Servicio Puerta a Puerta')">Cotizar</button></center>
+                    <h3>Servicio Puerta a Puerta</h3>
+                    <p>Recogemos tu vehículo donde estés y lo entregamos en tu destino final. Comodidad total garantizada.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Puerta a Puerta</span>
+                        <span class="feature-tag">Sin Intermediarios</span>
+                    </div>
+                    <button class="btn-secondary" onclick="openWhatsappForm('Solicitar Servicio Puerta a Puerta')">Cotizar</button>
                 </div>
             </div>
         </div>
@@ -325,7 +428,7 @@
                 </div>
 
                 <div class="cotizacion-info">
-                    <h3><center>¿Por qué elegirnos?</center></h3>
+                    <h3>¿Por qué elegirnos?</h3>
                     <div class="info-benefits">
                         <div class="benefit-item">
                             <i class="fas fa-clock"></i>

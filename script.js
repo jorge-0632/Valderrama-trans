@@ -573,6 +573,14 @@ function setupAccessibility() {
     });
 }
 
+function registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+            .then(() => console.log('Service Worker registrado'))
+            .catch(() => console.warn('No se pudo registrar el Service Worker'));
+    }
+}
+
 // ========== INICIALIZACIÓN ADICIONAL ==========
 document.addEventListener('DOMContentLoaded', function() {
     // Funciones existentes ya se llaman en la inicialización principal
