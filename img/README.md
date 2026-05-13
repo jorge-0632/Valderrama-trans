@@ -74,13 +74,6 @@ img/
 
 ---
 
-## 🖼️ FUENTES DE IMÁGENES RECOMENDADAS:
-
-- **Unsplash:** https://unsplash.com (busca "tow truck", "tractor", "transport vehicle")
-- **Pexels:** https://www.pexels.com
-- **Pixabay:** https://pixabay.com
-- **Freepik:** https://www.freepik.com (planes gratis disponibles)
-
 ---
 
 ## ✅ VERIFICACIÓN:

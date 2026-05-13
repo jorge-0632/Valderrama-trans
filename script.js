@@ -706,4 +706,3 @@ document.head.appendChild(style);
 console.log('VALDERRAMA SAS - Sistema de Cotizaciones');
 console.log('Versión: 1.0');
 console.log('Contacto: ' + EMPRESA_CONFIG.whatsapp);
-

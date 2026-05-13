@@ -26,6 +26,7 @@ body {
     color: var(--text-dark);
     background-color: var(--bg-light);
     line-height: 1.6;
+    
 }
 
 .container {
@@ -197,6 +198,7 @@ body {
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
+    
 }
 
 .hero-subtitle {
@@ -282,6 +284,9 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .benefit-card {
@@ -424,11 +429,16 @@ body {
 .info-box h4 {
     font-size: 32px;
     margin-bottom: 10px;
+    text-align: center;
+    text-align: center;
+
 }
+
 
 .about-text h3 {
     color: var(--primary-color);
     margin: 30px 0 15px 0;
+    text-align: center;
 }
 
 .commitment-list {
@@ -1625,4 +1635,3 @@ body {
         padding: 20px;
     }
 }
-
