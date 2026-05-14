@@ -28,10 +28,12 @@ function setupWhatsappButton() {
     
     whatsappBtn.href = whatsappUrl;
     whatsappBtn.target = '_blank';
+    whatsappBtn.rel = 'noopener noreferrer';
     
     if (whatsappLink) {
         whatsappLink.href = whatsappUrl;
         whatsappLink.target = '_blank';
+        whatsappLink.rel = 'noopener noreferrer';
     }
 }
 
@@ -43,18 +45,30 @@ function setupContactForm() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const nombre = document.getElementById('nombre').value;
-            const telefono = document.getElementById('telefono').value;
-            const ciudadOrigen = document.getElementById('ciudad-origen').value;
-            const ciudadDestino = document.getElementById('ciudad-destino').value;
+            const nombre = document.getElementById('nombre').value.trim();
+            const telefono = document.getElementById('telefono').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const ciudadOrigen = document.getElementById('ciudad-origen').value.trim();
+            const ciudadDestino = document.getElementById('ciudad-destino').value.trim();
             const tipoVehiculo = document.getElementById('tipo-vehiculo').value;
-            const mensaje = document.getElementById('mensaje').value;
-            
-            // Construir mensaje para WhatsApp
+            const mensaje = document.getElementById('mensaje').value.trim();
+
+            if (!validatePhone(telefono)) {
+                showNotification('Ingresa un teléfono válido con código de país', 'error');
+                return;
+            }
+
+            if (email && !validateEmail(email)) {
+                showNotification('Ingresa un email válido o déjalo en blanco', 'error');
+                return;
+            }
+
+            const emailLinea = email ? `*Email:* ${email}\n` : '';
             const mensajeCompleto = encodeURIComponent(
                 `¡Hola! Solicito una cotización:\n\n` +
                 `*Nombre:* ${nombre}\n` +
                 `*Teléfono:* ${telefono}\n` +
+                `${emailLinea}` +
                 `*Ciudad de Origen:* ${ciudadOrigen}\n` +
                 `*Ciudad Destino:* ${ciudadDestino}\n` +
                 `*Tipo de Vehículo:* ${tipoVehiculo}\n\n` +
@@ -63,13 +77,9 @@ function setupContactForm() {
             
             const whatsappURL = `https://wa.me/${EMPRESA_CONFIG.whatsapp}?text=${mensajeCompleto}`;
             
-            // Abrir WhatsApp
             window.open(whatsappURL, '_blank');
-            
-            // Limpiar formulario
+            saveQuote({ nombre, telefono, email, ciudadOrigen, ciudadDestino, tipoVehiculo, mensaje });
             contactForm.reset();
-            
-            // Mostrar mensaje de éxito
             showNotification('¡Mensaje enviado a WhatsApp!', 'success');
         });
     }
@@ -151,12 +161,15 @@ function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.textContent = message;
+    notification.setAttribute('role', 'status');
+    notification.setAttribute('aria-live', 'polite');
+    const backgroundColor = type === 'success' ? '#25d366' : type === 'info' ? '#0056a8' : '#ff6b35';
     notification.style.cssText = `
         position: fixed;
         top: 20px;
         right: 20px;
         padding: 15px 25px;
-        background-color: ${type === 'success' ? '#25d366' : '#ff6b35'};
+        background-color: ${backgroundColor};
         color: white;
         border-radius: 5px;
         box-shadow: 0 5px 20px rgba(0,0,0,0.2);
@@ -255,14 +268,15 @@ function observeAnimations() {
 function calculateQuote(tipoVehiculo, distancia) {
     // Precios base por tipo de vehículo (ejemplo)
     const preciosBase = {
-        'Carro particular': 150000,
-        'Camioneta': 200000,
-        'Camabaja': 300000,
-        'Grúa': 250000,
-        'Maquinaria liviana': 100000
+        'carro particular': 150000,
+        'camioneta': 200000,
+        'camabaja': 300000,
+        'grúa': 250000,
+        'maquinaria liviana': 100000
     };
     
-    const precioBase = preciosBase[tipoVehiculo] || 150000;
+    const key = tipoVehiculo ? tipoVehiculo.toLowerCase() : '';
+    const precioBase = preciosBase[key] || 150000;
     const precioKm = 3000;
     const costoDistancia = distancia * precioKm;
     const total = precioBase + costoDistancia;
@@ -299,10 +313,20 @@ function updateCotizacion() {
 
 function solicitarCotizacion() {
     const tipoVehiculo = document.getElementById('tipo-vehiculo-cot').value;
-    const ciudadOrigen = document.getElementById('ciudad-origen-cot').value;
-    const ciudadDestino = document.getElementById('ciudad-destino-cot').value;
-    const distancia = document.getElementById('distancia-cot').value;
-    
+    const ciudadOrigen = document.getElementById('ciudad-origen-cot').value.trim();
+    const ciudadDestino = document.getElementById('ciudad-destino-cot').value.trim();
+    const distancia = parseFloat(document.getElementById('distancia-cot').value) || 0;
+
+    if (!tipoVehiculo || !ciudadOrigen || !ciudadDestino || distancia <= 0) {
+        showNotification('Completa todos los datos para generar la cotización', 'error');
+        return;
+    }
+
+    if (ciudadOrigen.toLowerCase() === ciudadDestino.toLowerCase()) {
+        showNotification('El origen y el destino no pueden ser iguales', 'error');
+        return;
+    }
+
     const mensaje = encodeURIComponent(
         `¡Hola! Solicito cotización detallada:\n\n` +
         `*Tipo de Vehículo:* ${tipoVehiculo}\n` +
@@ -311,10 +335,11 @@ function solicitarCotizacion() {
         `*Distancia aproximada:* ${distancia} km\n\n` +
         `Me gustaría recibir una cotización más precisa.`
     );
-    
+
     const whatsappURL = `https://wa.me/${EMPRESA_CONFIG.whatsapp}?text=${mensaje}`;
     window.open(whatsappURL, '_blank');
 }
+
 
 // ========== FUNCIONES DE SEGUIMIENTO ==========
 function buscarEnvio() {

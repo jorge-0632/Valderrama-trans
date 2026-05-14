@@ -63,7 +63,7 @@
 </head>
 <body>
     <!-- Botón Flotante de WhatsApp -->
-    <a href="#" id="whatsappBtn" class="whatsapp-btn" title="Enviar por WhatsApp">
+    <a href="https://wa.me/573025705072?text=Hola,%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20transporte." id="whatsappBtn" class="whatsapp-btn" title="Enviar por WhatsApp" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -162,10 +162,10 @@
             </div>
 
             <div class="hero-actions">
-                <button class="btn-primary btn-lg" onclick="scrollTo('#contacto')">
+                <a class="btn-primary btn-lg" href="https://wa.me/573025705072?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n%20de%20transporte%20de%20veh%C3%ADculo." target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
-                </button>
-                <button class="btn-secondary btn-lg" onclick="scrollTo('#servicios')">
+                </a>
+                <button type="button" class="btn-secondary btn-lg" onclick="scrollTo('#servicios')">
                     <i class="fas fa-eye"></i> Ver Servicios
                 </button>
             </div>
@@ -278,7 +278,7 @@
                         <span class="feature-tag">GPS Incluido</span>
                         <span class="feature-tag">Seguro Total</span>
                     </div>
-                    <button class="btn-secondary" onclick="openWhatsappForm('Cotización Camabaja')">Cotizar</button>
+                    <a class="btn-secondary" href="https://wa.me/573025705072?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n%20de%20Transporte%20en%20Camabaja." target="_blank" rel="noopener noreferrer">Cotizar</a>
                 </div>
 
                 <div class="service-card">
@@ -291,7 +291,7 @@
                         <span class="feature-tag">Rescate 24/7</span>
                         <span class="feature-tag">Urgente</span>
                     </div>
-                    <button class="btn-secondary" onclick="openWhatsappForm('Cotización Grúa')">Cotizar</button>
+                    <a class="btn-secondary" href="https://wa.me/573025705072?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n%20de%20Transporte%20en%20Gr%C3%BAa." target="_blank" rel="noopener noreferrer">Cotizar</a>
                 </div>
 
                 <div class="service-card">
@@ -304,7 +304,7 @@
                         <span class="feature-tag">Protección Total</span>
                         <span class="feature-tag">Cuidado Premium</span>
                     </div>
-                    <button class="btn-secondary" onclick="openWhatsappForm('Cotización Carro Particular')">Cotizar</button>
+                    <a class="btn-secondary" href="https://wa.me/573025705072?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n%20de%20Transporte%20de%20Carro%20Particular." target="_blank" rel="noopener noreferrer">Cotizar</a>
                 </div>
 
                 <div class="service-card">
@@ -317,7 +317,7 @@
                         <span class="feature-tag">Equipos Especiales</span>
                         <span class="feature-tag">Carga Segura</span>
                     </div>
-                    <button class="btn-secondary" onclick="openWhatsappForm('Cotización Camioneta')">Cotizar</button>
+                    <a class="btn-secondary" href="https://wa.me/573025705072?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n%20de%20Transporte%20de%20Camioneta." target="_blank" rel="noopener noreferrer">Cotizar</a>
                 </div>
 
                 <div class="service-card">
@@ -330,7 +330,7 @@
                         <span class="feature-tag">Fijación Segura</span>
                         <span class="feature-tag">Equipos Pesados</span>
                     </div>
-                    <button class="btn-secondary" onclick="openWhatsappForm('Cotización Maquinaria Liviana')">Cotizar</button>
+                    <a class="btn-secondary" href="https://wa.me/573025705072?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n%20de%20Transporte%20de%20Maquinaria%20Liviana." target="_blank" rel="noopener noreferrer">Cotizar</a>
                 </div>
 
                 <div class="service-card">
@@ -343,7 +343,7 @@
                         <span class="feature-tag">Puerta a Puerta</span>
                         <span class="feature-tag">Sin Intermediarios</span>
                     </div>
-                    <button class="btn-secondary" onclick="openWhatsappForm('Solicitar Servicio Puerta a Puerta')">Cotizar</button>
+                    <a class="btn-secondary" href="https://wa.me/573025705072?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n%20de%20Servicio%20Puerta%20a%20Puerta." target="_blank" rel="noopener noreferrer">Cotizar</a>
                 </div>
             </div>
         </div>
@@ -363,11 +363,11 @@
                         <label for="tipo-vehiculo-cot">Tipo de Vehículo</label>
                         <select id="tipo-vehiculo-cot" onchange="updateCotizacion()">
                             <option value="">Selecciona el tipo</option>
-                            <option value="carro">Carro Particular</option>
-                            <option value="camioneta">Camioneta</option>
-                            <option value="camabaja">Camabaja</option>
-                            <option value="grua">Grúa</option>
-                            <option value="maquinaria">Maquinaria Liviana</option>
+                            <option value="Carro particular">Carro Particular</option>
+                            <option value="Camioneta">Camioneta</option>
+                            <option value="Camabaja">Camabaja</option>
+                            <option value="Grúa">Grúa</option>
+                            <option value="Maquinaria liviana">Maquinaria Liviana</option>
                         </select>
                     </div>
 
@@ -421,7 +421,7 @@
                                 <span id="total-cotizacion">$0</span>
                             </div>
                         </div>
-                        <button class="btn-primary btn-lg" onclick="solicitarCotizacion()">
+                        <button type="button" class="btn-primary btn-lg" data-loading="true" onclick="solicitarCotizacion()">
                             <i class="fab fa-whatsapp"></i> Solicitar Cotización Exacta
                         </button>
                     </div>
@@ -908,7 +908,7 @@
                         <div class="info-details">
                             <h4>WhatsApp</h4>
                             <p>+57 302 5705072</p>
-                            <a href="#" id="whatsappLink" class="btn-secondary">Enviar Mensaje</a>
+                            <a href="https://wa.me/573025705072?text=Hola,%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20transporte." id="whatsappLink" class="btn-secondary" target="_blank" rel="noopener noreferrer">Enviar Mensaje</a>
                         </div>
                     </div>
 
@@ -956,6 +956,11 @@
                     <div class="form-group">
                         <label for="telefono">Teléfono *</label>
                         <input type="tel" id="telefono" placeholder="+57 302 5705072" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="tu@ejemplo.com">
                     </div>
 
                     <div class="form-row">
