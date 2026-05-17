@@ -113,7 +113,11 @@ section + section {
     margin: 0 auto;
     padding: 16px 0;
 }
-
+.logo-icon{
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+}
 .nav-logo {
     display: flex;
     align-items: center;
@@ -162,7 +166,6 @@ section + section {
 }
 
 .menu-toggle {
-    display: none;
     width: 48px;
     min-width: 48px;
     height: 48px;
@@ -170,11 +173,12 @@ section + section {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.16);
 
-    display: flex;
-    flex-direction: column; /* <-- FALTA ESTO */
+    display: none; /* oculto en desktop */
+
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5px; /* mejor que margin-top */
+    gap: 5px;
 
     cursor: pointer;
 }
@@ -186,6 +190,13 @@ section + section {
     border-radius: 999px;
     display: block;
     transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Mostrar solo en móvil */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
 }
 
 .hero {

@@ -70,10 +70,14 @@
     <!-- Navbar -->
     <nav class="navbar sticky" role="navigation" aria-label="Menú principal">
         <div class="nav-container">
+
+            <!-- logotipo y menú -->
             <div class="nav-logo">
-                <i class="fas fa-truck" aria-hidden="true"></i>
-                <span>VALDERRAMA SAS</span>
+                    <img src="img/camion.jpg" alt="Camión" class="logo-icon">
+                    <span>VALDERRAMA L.Y.T</span>
             </div>
+
+
             <div class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
                 <span></span>
                 <span></span>
@@ -152,22 +156,22 @@
                     <div class="stat-label">Vehículos Transportados</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">500+</div>
+                    <div class="stat-number">1200+</div>
                     <div class="stat-label">Clientes Satisfechos</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">32</div>
+                    <div class="stat-number">32+</div>
                     <div class="stat-label">Ciudades Cubiertas</div>
                 </div>
             </div>
 
             <div class="hero-actions">
                 <a class="btn-primary btn-lg" href="https://wa.me/573025705072?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n%20de%20transporte%20de%20veh%C3%ADculo." target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+                    <i class="fab fa-whatsapp"></i> Cotiza ahora
                 </a>
-                <button type="button" class="btn-secondary btn-lg" onclick="scrollTo('#servicios')">
+                <a href="#servicios" class="btn-secondary btn-lg">
                     <i class="fas fa-eye"></i> Ver Servicios
-                </button>
+                </a>
             </div>
 
             <div class="hero-trust">
@@ -352,12 +356,14 @@
     <!-- SECCIÓN COTIZACIÓN -->
     <section id="cotizacion" class="cotizacion">
         <div class="container">
-            <h2 class="section-title">Cotización Instantánea</h2>
-            <p class="section-subtitle">Calcula el costo de tu transporte en segundos</p>
+            <center> 
+                <h2 class="section-title">Cotización Instantánea</h2>
+            <p class="section-subtitle">"Calcula el costo de tu transporte en segundos"</p>
+            </center>
 
             <div class="cotizacion-content">
                 <div class="cotizacion-form">
-                    <h3>Calcula tu Cotización</h3>
+                    <h3><center>Calcula tu Cotización</center></h3>
 
                     <div class="form-group">
                         <label for="tipo-vehiculo-cot">Tipo de Vehículo</label>
@@ -421,14 +427,20 @@
                                 <span id="total-cotizacion">$0</span>
                             </div>
                         </div>
-                        <button type="button" class="btn-primary btn-lg" data-loading="true" onclick="solicitarCotizacion()">
-                            <i class="fab fa-whatsapp"></i> Solicitar Cotización Exacta
-                        </button>
+                        <center>
+                            <button type="button" class="btn-primary btn-lg" data-loading="true" onclick="solicitarCotizacion()">
+                                <i class="fab fa-whatsapp"></i> Solicitar Cotización Exacta
+                            </button>
+                        </center>
                     </div>
                 </div>
+    </section>
+
+
 
                 <div class="cotizacion-info">
-                    <h3>¿Por qué elegirnos?</h3>
+                    <h2><center>¿Por qué elegirnos?</center></h2><br>
+                        <p>En VALDERRAMA SAS, no solo ofrecemos transporte, sino una experiencia completa de seguridad, confianza y tecnología avanzada para que tu vehículo llegue a su destino sin preocupaciones.</p>
                     <div class="info-benefits">
                         <div class="benefit-item">
                             <i class="fas fa-clock"></i>
@@ -462,13 +474,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    
 
     <!-- SECCIÓN SEGUIMIENTO -->
     <section id="seguimiento" class="seguimiento">
         <div class="container">
-            <h2 class="section-title">Seguimiento de Envíos</h2>
-            <p class="section-subtitle">Rastrea tu vehículo en tiempo real</p>
+            <h2 class="section-title"><center>Seguimiento de Envíos</center></h2>
+            <p class="section-subtitle"><center>"Rastrea tu vehículo en tiempo real"</center></p>
 
             <div class="seguimiento-content">
                 <div class="seguimiento-form">
@@ -526,8 +538,8 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2 class="section-title">Quiénes Somos</h2>
-                    <p>Somos una empresa dedicada al transporte seguro y confiable de vehículos en Colombia con más de 15 años de experiencia en el mercado.</p>
+                    <h2 class="section-title"><center>Quiénes Somos</center></h2>
+                    <p>"Somos una empresa dedicada al transporte seguro y confiable de vehículos en Colombia con más de 15 años de experiencia en el mercado."</p>
                     
                     <div class="about-info">
                         <div class="info-box">
@@ -568,9 +580,9 @@
     <!-- SECCIÓN 4: SEGURIDAD Y CONFIANZA -->
     <section class="security">
         <div class="container">
-            <h2 class="section-title">Seguridad y Confianza</h2>
-            <p class="section-subtitle">Todo lo que hacemos está pensado en tu tranquilidad</p>
-            
+            <h2 class="section-title"><center>Seguridad y Confianza</center></h2>
+            <p class="section-subtitle"><center>"Todo lo que hacemos está pensado en tu tranquilidad"</center></p>
+
             <div class="security-grid">
                 <div class="security-card">
                     <div class="security-icon">
@@ -610,8 +622,8 @@
     <!-- SECCIÓN CERTIFICACIONES -->
     <section class="certificaciones">
         <div class="container">
-            <h2 class="section-title">Certificaciones y Reconocimientos</h2>
-            <p class="section-subtitle">Nuestra calidad y compromiso avalados</p>
+            <h2 class="section-title"><center>Certificaciones y Reconocimientos</center></h2>
+            <p class="section-subtitle"><center>"Nuestra calidad y compromiso avalados"</center></p>
 
             <div class="certificaciones-grid">
                 <div class="certificacion-card">
@@ -630,15 +642,6 @@
                     <h3>Seguro de Responsabilidad</h3>
                     <p>Cobertura completa hasta $500M</p>
                     <span class="cert-year">2024</span>
-                </div>
-
-                <div class="certificacion-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>Premio Excelencia</h3>
-                    <p>Mejor Empresa de Transporte 2023</p>
-                    <span class="cert-year">2023</span>
                 </div>
 
                 <div class="certificacion-card">
@@ -674,9 +677,9 @@
     <!-- SECCIÓN 5: GALERÍA -->
     <section id="galeria" class="gallery">
         <div class="container">
-            <h2 class="section-title">NUESTRA FLOTA</h2>
-            <p class="section-subtitle">Visualiza nuestro trabajo y profesionalismo</p>
-            
+            <h2 class="section-title"><center>NUESTRA FLOTA</center></h2>
+            <p class="section-subtitle"><center>"Visualiza nuestro trabajo y profesionalismo"</center></p>
+
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <img src="img/camabaja-1.jpg" alt="Camabaja transportando vehículo particular en Bogotá" loading="lazy">
@@ -721,9 +724,9 @@
     <!-- SECCIÓN 7: COBERTURA -->
     <section id="cobertura" class="coverage">
         <div class="container">
-            <h2 class="section-title">Nuestra Cobertura</h2>
-            <p class="section-subtitle">Operamos en todo Colombia y expandimos continuamente</p>
-            
+            <h2 class="section-title"><center>Nuestra Cobertura</center></h2>
+            <p class="section-subtitle"><center>"Operamos en todo Colombia y expandimos continuamente"</center></p>
+
             <div class="coverage-content">
                 <div class="coverage-map">
                     <div id="map" style="height: 400px; border-radius: 10px; overflow: hidden;"></div>
@@ -789,9 +792,9 @@
     <!-- SECCIÓN 8: TESTIMONIOS -->
     <section id="testimonios" class="testimonials">
         <div class="container">
-            <h2 class="section-title">Lo que Dicen Nuestros Clientes</h2>
-            <p class="section-subtitle">Opiniones reales de clientes satisfechos</p>
-            
+            <h2 class="section-title"><center>Lo que Dicen Nuestros Clientes</center></h2>
+            <p class="section-subtitle"><center>"Opiniones reales de clientes satisfechos"</center></p>
+
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="stars">
@@ -838,8 +841,8 @@
     <!-- SECCIÓN ESTADÍSTICAS -->
     <section class="estadisticas">
         <div class="container">
-            <h2 class="section-title">VALDERRAMA SAS en Números</h2>
-            <p class="section-subtitle">Resultados que respaldan nuestra experiencia</p>
+            <h2 class="section-title"><center>VALDERRAMA SAS en Números</center></h2>
+            <p class="section-subtitle"><center>"Resultados que respaldan nuestra experiencia"</center></p>
 
             <div class="estadisticas-grid">
                 <div class="estadistica-card">
@@ -884,9 +887,8 @@
     <!-- SECCIÓN 6: CONTACTO -->
     <section id="contacto" class="contact">
         <div class="container">
-            <h2 class="section-title">Contáctanos</h2>
-            <p class="section-subtitle">Estamos listos para ayudarte</p>
-            
+            <h2 class="section-title"><center>Contáctanos</center></h2>
+            <p class="section-subtitle"><center>"Estamos listos para ayudarte"</center></p>
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Información de Contacto</h3>
@@ -946,7 +948,7 @@
                 </div>
 
                 <form id="contactForm" class="contact-form">
-                    <h3>Envíanos tu Cotización</h3>
+                    <h3><center>Envíanos tu Cotización</center></h3>
                     
                     <div class="form-group">
                         <label for="nombre">Nombre Completo *</label>
@@ -1003,8 +1005,8 @@
     <!-- SECCIÓN PREGUNTAS FRECUENTES -->
     <section class="faq">
         <div class="container">
-            <h2 class="section-title">Preguntas Frecuentes</h2>
-            <p class="section-subtitle">Resolvemos tus dudas más comunes</p>
+            <h2 class="section-title"><center>Preguntas Frecuentes</center></h2>
+            <p class="section-subtitle"><center>"Resolvemos tus dudas más comunes"</center></p>
 
             <div class="faq-container">
                 <div class="faq-item">
